@@ -2,6 +2,7 @@ import { useContext,useState } from 'react'
 import {Link} from 'react-router-dom' 
 import PostContext from '../Context/PostContext.jsx'
 import PostForm from './PostForm'
+import { FaRegEdit } from "react-icons/fa";
 
 const PostCard=({post})=> {
     const [editing,setEditing]=useState(false)
@@ -17,14 +18,14 @@ const PostCard=({post})=> {
         ):(
             <>
             <Link className='card-info' to={`/posts/${post.id}`}>
-            <img>{post.image}</img>
+            
             <h3>{post.title}</h3> 
             <p>{post.body.slice(0,100)}...</p> 
               
 
 
             </Link>
-            <button className='btn btn-custom' onClick={()=>setEditing(true)}>Edit</button> 
+            <button className='btn btn-custom' onClick={()=>setEditing(true)}><FaRegEdit /></button> 
          
         </>
 

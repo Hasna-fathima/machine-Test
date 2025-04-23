@@ -35,7 +35,7 @@ const handleSubmit=(e)=>{
   return (
     <div className='conrtainer'>
         {!showForm && !editData && (
-            <button className='btn  mb-3' onClick={()=>setShowForm(true)}><IoMdAdd />Add post</button>
+            <button className='btn btn-custom' onClick={()=>setShowForm(true)}><IoMdAdd />Add post</button>
         )}
         {showForm && (
 
@@ -46,7 +46,7 @@ const handleSubmit=(e)=>{
         
             <button className='btn btn-custom mt-2'type='submit' >{editData ? 'update' : 'Add'}post</button>
                 {!editData && (
-                    <button className='btn btn-custom' type='button'
+                    <button className='btn btn-custom' 
                     onClick={()=>setShowForm(false)}>cancel</button>
                 )}
         

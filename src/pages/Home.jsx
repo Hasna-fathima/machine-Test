@@ -20,7 +20,7 @@ return (
         <h4>Posts</h4>
         <SearchBar search={search} setSearch={setSearch}/>
         <PostForm/>
-       <div className='mt-4'>{filteredPosts.length > 0 ? ( filteredPosts.map(post=>(
+       <div className='post-card-container'>{filteredPosts.length > 0 ? ( filteredPosts.map(post=>(
         <PostCard key={post.id}  post={post} />))):(<p>no matching posts found</p>)
        }
 
